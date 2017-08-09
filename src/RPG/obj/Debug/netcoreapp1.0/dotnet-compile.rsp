@@ -1,5 +1,5 @@
---temp-output:c:\Users\epicodus\documents\visual studio 2015\Projects\RPG\src\RPG\obj\Debug\netcoreapp1.0\
---out:c:\Users\epicodus\documents\visual studio 2015\Projects\RPG\src\RPG\bin\Debug\netcoreapp1.0\RPG.dll
+--temp-output:C:\Users\epicodus\documents\Visual Studio 2015\projects\RPG\src\RPG\obj\Debug\netcoreapp1.0\
+--out:C:\Users\epicodus\documents\Visual Studio 2015\projects\RPG\src\RPG\bin\Debug\netcoreapp1.0\RPG.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -68,7 +68,10 @@
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.DotNet.ProjectModel\1.0.0-rc3-003121\lib\netstandard1.6\Microsoft.DotNet.ProjectModel.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.DotNet.ProjectModel.Loader\1.0.0-preview2-003121\lib\netstandard1.6\Microsoft.DotNet.ProjectModel.Loader.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.EntityFrameworkCore\1.0.1\lib\netstandard1.3\Microsoft.EntityFrameworkCore.dll
+--reference:C:\Users\epicodus\.nuget\packages\Microsoft.EntityFrameworkCore.Design\1.0.0-preview2-final\lib\netcoreapp1.0\Microsoft.EntityFrameworkCore.Design.dll
+--reference:C:\Users\epicodus\.nuget\packages\Microsoft.EntityFrameworkCore.Design.Core\1.0.0-preview2-final\lib\netstandard1.3\Microsoft.EntityFrameworkCore.Design.Core.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.EntityFrameworkCore.Relational\1.0.1\lib\netstandard1.3\Microsoft.EntityFrameworkCore.Relational.dll
+--reference:C:\Users\epicodus\.nuget\packages\Microsoft.EntityFrameworkCore.Relational.Design\1.0.0\lib\netstandard1.3\Microsoft.EntityFrameworkCore.Relational.Design.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.EntityFrameworkCore.SqlServer\1.0.1\lib\netstandard1.3\Microsoft.EntityFrameworkCore.SqlServer.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.Extensions.Caching.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Caching.Abstractions.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.Extensions.Caching.Memory\1.0.0\lib\netstandard1.3\Microsoft.Extensions.Caching.Memory.dll
@@ -208,9 +211,12 @@
 --reference:C:\Users\epicodus\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"c:\Users\epicodus\documents\visual studio 2015\Projects\RPG\src\RPG\obj\Debug\netcoreapp1.0\RPGdotnet-compile.deps.json",RPG.deps.json
-c:\Users\epicodus\documents\visual studio 2015\Projects\RPG\src\RPG\Program.cs
-c:\Users\epicodus\documents\visual studio 2015\Projects\RPG\src\RPG\Startup.cs
-c:\Users\epicodus\documents\visual studio 2015\Projects\RPG\src\RPG\Controllers\HomeController.cs
-c:\Users\epicodus\documents\visual studio 2015\Projects\RPG\src\RPG\Models\Player.cs
-c:\Users\epicodus\documents\visual studio 2015\Projects\RPG\src\RPG\Models\RPGContext.cs
+--resource:"C:\Users\epicodus\documents\Visual Studio 2015\projects\RPG\src\RPG\obj\Debug\netcoreapp1.0\RPGdotnet-compile.deps.json",RPG.deps.json
+C:\Users\epicodus\documents\Visual Studio 2015\projects\RPG\src\RPG\Program.cs
+C:\Users\epicodus\documents\Visual Studio 2015\projects\RPG\src\RPG\Startup.cs
+C:\Users\epicodus\documents\Visual Studio 2015\projects\RPG\src\RPG\Controllers\HomeController.cs
+C:\Users\epicodus\documents\Visual Studio 2015\projects\RPG\src\RPG\Migrations\20170809173633_Initial.cs
+C:\Users\epicodus\documents\Visual Studio 2015\projects\RPG\src\RPG\Migrations\20170809173633_Initial.Designer.cs
+C:\Users\epicodus\documents\Visual Studio 2015\projects\RPG\src\RPG\Migrations\RPGContextModelSnapshot.cs
+C:\Users\epicodus\documents\Visual Studio 2015\projects\RPG\src\RPG\Models\Player.cs
+C:\Users\epicodus\documents\Visual Studio 2015\projects\RPG\src\RPG\Models\RPGContext.cs
