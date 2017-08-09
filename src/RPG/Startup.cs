@@ -7,6 +7,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
+using RPG.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
 
 namespace RPG
 {
@@ -37,6 +42,12 @@ namespace RPG
             services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddMvc();
+            services.AddEntityFramework()
+                .AddDbContext<RPGContext>(options =>
+                    options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+            services.AddIdentity<User, IdentityRole>()
+               .AddEntityFrameworkStores<RPGContext>()
+               .AddDefaultTokenProviders();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,7 +71,7 @@ namespace RPG
             app.UseApplicationInsightsExceptionTelemetry();
 
             app.UseStaticFiles();
-
+            app.UseIdentity();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
