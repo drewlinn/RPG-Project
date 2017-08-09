@@ -1,0 +1,22 @@
+﻿@model RPG.Models.Character
+@{
+    ViewData["Title"] = "Character - Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add a new Character</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.name)
+    @Html.EditorFor(model => model.name)
+
+    @Html.LabelFor(model => model.image)
+    @Html.EditorFor(model => model.image)
+
+    @Html.LabelFor(model => model.inventoryId)
+    @Html.EditorFor(model => model.inventoryId)
+
+    <input type="submit" value="Create" class="btn btn-default" />
+}
+@Html.ActionLink("Back to List", "Index")
