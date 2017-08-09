@@ -216,6 +216,8 @@
 "C:\Users\epicodus\Documents\Visual Studio 2015\Projects\RPG\src\RPG\Migrations\20170809173633_Initial.Designer.cs"
 "C:\Users\epicodus\Documents\Visual Studio 2015\Projects\RPG\src\RPG\Migrations\20170809182853_Authentication.cs"
 "C:\Users\epicodus\Documents\Visual Studio 2015\Projects\RPG\src\RPG\Migrations\20170809182853_Authentication.Designer.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\RPG\src\RPG\Migrations\20170809200302_UserTable.cs"
+"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\RPG\src\RPG\Migrations\20170809200302_UserTable.Designer.cs"
 "C:\Users\epicodus\Documents\Visual Studio 2015\Projects\RPG\src\RPG\Migrations\RPGContextModelSnapshot.cs"
 "C:\Users\epicodus\Documents\Visual Studio 2015\Projects\RPG\src\RPG\Models\Player.cs"
 "C:\Users\epicodus\Documents\Visual Studio 2015\Projects\RPG\src\RPG\Models\RPGContext.cs"

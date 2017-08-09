@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace RPG.Models
 {
-    public class RPGContext : DbContext
+    public class RPGContext : IdentityDbContext<User>
     {
         public RPGContext(DbContextOptions options) : base(options)
         {
@@ -19,7 +19,7 @@ namespace RPG.Models
         {
             base.OnModelCreating(builder);
         }
-
+        public DbSet<User> Users { get; set;  }
         public DbSet<Player> Players { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
