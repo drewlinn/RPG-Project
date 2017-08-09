@@ -8,8 +8,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RPG.Models
 {
-    [Table("Players")]
-    public class Player
+    [Table("Characters")]
+    public class Character
     {
         [Key]
         public int id { get; set; }

@@ -8,8 +8,8 @@ using RPG.Models;
 namespace RPG.Migrations
 {
     [DbContext(typeof(RPGContext))]
-    [Migration("20170809200302_UserTable")]
-    partial class UserTable
+    [Migration("20170809223517_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -124,7 +124,7 @@ namespace RPG.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("RPG.Models.Player", b =>
+            modelBuilder.Entity("RPG.Models.Character", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
@@ -137,7 +137,7 @@ namespace RPG.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Players");
+                    b.ToTable("Characters");
                 });
 
             modelBuilder.Entity("RPG.Models.User", b =>

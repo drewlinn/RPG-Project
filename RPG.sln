@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "RPG", "src\RPG\RPG.xproj", "{BE8DAE54-D5B2-4999-9807-31313C0A199D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C6EF6FBC-3B68-4D11-A71E-D4DE9D45176C}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "RPG.Tests", "RPG.Tests\RPG.Tests.xproj", "{4F2B278D-CF56-43A2-83C9-FDDD8799DCE3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,11 +26,17 @@ Global
 		{BE8DAE54-D5B2-4999-9807-31313C0A199D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE8DAE54-D5B2-4999-9807-31313C0A199D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE8DAE54-D5B2-4999-9807-31313C0A199D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F2B278D-CF56-43A2-83C9-FDDD8799DCE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F2B278D-CF56-43A2-83C9-FDDD8799DCE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F2B278D-CF56-43A2-83C9-FDDD8799DCE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F2B278D-CF56-43A2-83C9-FDDD8799DCE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BE8DAE54-D5B2-4999-9807-31313C0A199D} = {5C7AF10F-B2B9-4E7E-BC97-0C76E946144C}
+		{C6EF6FBC-3B68-4D11-A71E-D4DE9D45176C} = {6214F52F-1D36-45E6-88AA-6141C74284F2}
+		{4F2B278D-CF56-43A2-83C9-FDDD8799DCE3} = {C6EF6FBC-3B68-4D11-A71E-D4DE9D45176C}
 	EndGlobalSection
 EndGlobal

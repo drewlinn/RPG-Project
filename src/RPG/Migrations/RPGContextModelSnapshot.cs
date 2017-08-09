@@ -123,7 +123,7 @@ namespace RPG.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("RPG.Models.Player", b =>
+            modelBuilder.Entity("RPG.Models.Character", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd();
@@ -136,7 +136,7 @@ namespace RPG.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("Players");
+                    b.ToTable("Characters");
                 });
 
             modelBuilder.Entity("RPG.Models.User", b =>

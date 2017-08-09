@@ -20,7 +20,7 @@ namespace RPG.Models
             base.OnModelCreating(builder);
         }
         public DbSet<User> Users { get; set;  }
-        public DbSet<Player> Players { get; set; }
+        public DbSet<Character> Characters { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=RPG;integrated security=True");
