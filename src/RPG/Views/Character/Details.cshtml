@@ -4,10 +4,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Experience Details</h2>
+<h2>Character Details</h2>
 <hr />
-<p>@Html.DisplayNameFor(model => model.name): @Html.DisplayFor(model => model.name)</p>
-<p>@Html.DisplayNameFor(model => model.image): @Html.DisplayFor(model => model.image)</p>
+<p>@Html.DisplayFor(model => model.name)</p>
+<img src ="@Model.image" alt="@Model.name" />
 <p>@Html.DisplayNameFor(model => model.inventoryId): @Html.DisplayFor(model => model.inventoryId)</p>
 
 <p>@Html.ActionLink("Edit", "Edit", new { id = Model.id }) | @Html.ActionLink("Back to List", "Index")</p>
