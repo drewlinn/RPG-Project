@@ -17,8 +17,8 @@
     @Html.LabelFor(model => model.weight)
     @Html.EditorFor(model => model.weight)
 
-    @Html.LabelFor(model => model.categoryId)
-    @Html.EditorFor(model => model.categoryId)
+    
+    @Html.DropDownList("categoryId")
 
     <input type="submit" value="Create" class="btn btn-default" />
 }

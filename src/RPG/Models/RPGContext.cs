@@ -23,6 +23,7 @@ namespace RPG.Models
         public DbSet<Character> Characters { get; set; }
         public DbSet<Location> Locations { get; set; }
         public DbSet<Item> Items { get; set; }
+        public DbSet<ItemCategory> ItemCategories { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
         public DbSet<NPC> NPCs { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)

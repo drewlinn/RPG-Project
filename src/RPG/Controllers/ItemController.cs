@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using RPG.Models;
 
 namespace RPG.Controllers
@@ -24,6 +25,7 @@ namespace RPG.Controllers
         }
         public IActionResult Create()
         {
+            ViewBag.CategoryId = new SelectList(db.ItemCategories, "id", "type");
             return View();
         }
         [HttpPost]

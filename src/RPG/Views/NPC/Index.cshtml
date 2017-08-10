@@ -15,12 +15,6 @@
         <th>
             @Html.DisplayNameFor(model => model.name)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.image)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.inventoryId)
-        </th>
         <th></th>
     </tr>
 
@@ -29,12 +23,6 @@
         <tr>
             <td>
                 @Html.DisplayFor(model => npc.name) --
-            </td>
-            <td>
-                @Html.DisplayFor(model => npc.image) --
-            </td>
-            <td>
-                @Html.DisplayFor(model => npc.inventoryId) --
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = npc.id })
