@@ -1,0 +1,20 @@
+﻿@model RPG.Models.Location
+
+@{
+    ViewData["Title"] = "Location - Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Are you sure you want to Delete this Location?</h2>
+
+
+@Html.DisplayNameFor(model => model.name) : @Html.DisplayFor(model => model.name)
+@Html.DisplayNameFor(model => model.type) : @Html.DisplayFor(model => model.type)
+
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}
+
+<p>@Html.ActionLink("Back to home", "Index")</p>

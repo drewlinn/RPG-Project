@@ -1,0 +1,19 @@
+﻿@model RPG.Models.Location
+@{
+    ViewData["Title"] = "Location - Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add a new Location</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.name)
+    @Html.EditorFor(model => model.name)
+
+    @Html.LabelFor(model => model.type)
+    @Html.EditorFor(model => model.type)
+
+    <input type="submit" value="Create" class="btn btn-default" />
+}
+@Html.ActionLink("Back to List", "Index")

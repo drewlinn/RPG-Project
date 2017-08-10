@@ -1,0 +1,41 @@
+﻿@model IEnumerable<RPG.Models.Location>
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>RPG</h2>
+<hr />
+<p>
+    @Html.ActionLink("Add New Location", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var loc in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => loc.name) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => loc.type) --
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = loc.id })
+                @Html.ActionLink("Details", "Details", new { id = loc.id })
+                @Html.ActionLink("Delete", "Delete", new { id = loc.id })
+            </td>
+        </tr>
+
+    }
+</table>
