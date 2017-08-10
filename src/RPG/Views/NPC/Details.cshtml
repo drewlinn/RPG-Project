@@ -1,0 +1,13 @@
+﻿@model RPG.Models.NPC
+@{
+    ViewData["Title"] = "NPC - Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>NPC Details</h2>
+<hr />
+<p>@Html.DisplayFor(model => model.name)</p>
+<img src ="@Model.image" alt="@Model.name" />
+<p>@Html.DisplayNameFor(model => model.inventoryId): @Html.DisplayFor(model => model.inventoryId)</p>
+
+<p>@Html.ActionLink("Edit", "Edit", new { id = Model.id }) | @Html.ActionLink("Back to List", "Index")</p>

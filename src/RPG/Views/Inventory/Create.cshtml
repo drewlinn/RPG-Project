@@ -1,0 +1,35 @@
+﻿@model RPG.Models.Inventory
+@{
+    ViewData["Title"] = "Inventory - Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add a new Inventory</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.helmetId)
+    @Html.EditorFor(model => model.helmetId)
+
+    @Html.LabelFor(model => model.armorId)
+    @Html.EditorFor(model => model.armorId)
+
+    @Html.LabelFor(model => model.gloveId)
+    @Html.EditorFor(model => model.gloveId)
+
+    @Html.LabelFor(model => model.bootId)
+    @Html.EditorFor(model => model.bootId)
+
+    @Html.LabelFor(model => model.accessoryId)
+    @Html.EditorFor(model => model.accessoryId)
+
+    @Html.LabelFor(model => model.rEquipId)
+    @Html.EditorFor(model => model.rEquipId)
+
+    @Html.LabelFor(model => model.lEquipId)
+    @Html.EditorFor(model => model.lEquipId)
+
+
+    <input type="submit" value="Create" class="btn btn-default" />
+}
+@Html.ActionLink("Back to List", "Index")

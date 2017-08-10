@@ -18,7 +18,7 @@ namespace RPG.Controllers
 
         public IActionResult Details(int id)
         {
-            var thisLocation = db.Locations.FirstOrDefault(cha => cha.id == id);
+            var thisLocation = db.Locations.FirstOrDefault(loc => loc.id == id);
 
             return View(thisLocation);
         }
@@ -35,21 +35,21 @@ namespace RPG.Controllers
         }
         public IActionResult Delete(int id)
         {
-            var thisCha = db.Locations.FirstOrDefault(cha => cha.id == id);
-            return View(thisCha);
+            var thisLoc = db.Locations.FirstOrDefault(loc => loc.id == id);
+            return View(thisLoc);
         }
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
-            var thisCha = db.Locations.FirstOrDefault(cha => cha.id == id);
-            db.Locations.Remove(thisCha);
+            var thisLoc = db.Locations.FirstOrDefault(loc => loc.id == id);
+            db.Locations.Remove(thisLoc);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult Edit(int id)
         {
-            var thisCha = db.Locations.FirstOrDefault(cha => cha.id == id);
-            return View(thisCha);
+            var thisLoc = db.Locations.FirstOrDefault(loc => loc.id == id);
+            return View(thisLoc);
         }
         [HttpPost]
         public IActionResult Edit(Location location)

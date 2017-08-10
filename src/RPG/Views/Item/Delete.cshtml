@@ -1,0 +1,24 @@
+﻿@model RPG.Models.Item
+
+@{
+    ViewData["Title"] = "Item - Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Are you sure you want to Delete this item?</h2>
+
+
+@Html.DisplayNameFor(model => model.name) : @Html.DisplayFor(model => model.name)
+@Html.DisplayNameFor(model => model.sizeId) : @Html.DisplayFor(model => model.sizeId)
+@Html.DisplayNameFor(model => model.weight) : @Html.DisplayFor(model => model.weight)
+@Html.DisplayNameFor(model => model.categoryId) : @Html.DisplayFor(model => model.categoryId)
+
+
+
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}
+
+<p>@Html.ActionLink("Back to home", "Index")</p>

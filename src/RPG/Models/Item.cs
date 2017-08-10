@@ -8,13 +8,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RPG.Models
 {
-    [Table("Characters")]
-    public class Character
+    [Table("Items")]
+    public class Item
     {
         [Key]
-        public int id { get; set; }
+        public int id { get; set;  }
         public string name { get; set; }
-        public string image { get; set; }
-        public int inventoryId { get; set; }
+        public int sizeId { get; set; }
+        public int weight { get; set; }
+        public int categoryId { get; set; }
     }
 }

@@ -1,0 +1,18 @@
+﻿@model RPG.Models.Inventory
+@{
+    ViewData["Title"] = "Inventory - Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Inventory Details</h2>
+<hr />
+<p>@Html.DisplayFor(model => model.helmetId)</p>
+<p>@Html.DisplayNameFor(model => model.armorId): @Html.DisplayFor(model => model.armorId)</p>
+<p>@Html.DisplayNameFor(model => model.gloveId): @Html.DisplayFor(model => model.gloveId)</p>
+<p>@Html.DisplayNameFor(model => model.bootId): @Html.DisplayFor(model => model.bootId)</p>
+<p>@Html.DisplayNameFor(model => model.accessoryId): @Html.DisplayFor(model => model.accessoryId)</p>
+<p>@Html.DisplayNameFor(model => model.rEquipId): @Html.DisplayFor(model => model.rEquipId)</p>
+<p>@Html.DisplayNameFor(model => model.lEquipId): @Html.DisplayFor(model => model.lEquipId)</p>
+
+
+<p>@Html.ActionLink("Edit", "Edit", new { id = Model.id }) | @Html.ActionLink("Back to List", "Index")</p>

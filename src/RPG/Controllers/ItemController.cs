@@ -1,60 +1,60 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RPG.Models;
-using System;
-
 
 namespace RPG.Controllers
 {
-    public class CharacterController : Controller
+    public class ItemController : Controller
     {
         private RPGContext db = new RPGContext();
         public IActionResult Index()
         {
-            return View(db.Characters.ToList());
+            return View(db.Items.ToList());
         }
 
         public IActionResult Details(int id)
         {
-            var thisCharacter = db.Characters.FirstOrDefault(cha => cha.id == id);
+            var thisItem = db.Items.FirstOrDefault(item => item.id == id);
 
-            return View(thisCharacter);
+            return View(thisItem);
         }
         public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Character character)
+        public IActionResult Create(Item item)
         {
-            db.Characters.Add(character);
+            db.Items.Add(item);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult Delete(int id)
         {
-            var thisCha = db.Characters.FirstOrDefault(cha => cha.id == id);
-            return View(thisCha);
+            var thisItem = db.Items.FirstOrDefault(item => item.id == id);
+            return View(thisItem);
         }
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
-            var thisCha = db.Characters.FirstOrDefault(cha => cha.id == id);
-            db.Characters.Remove(thisCha);
+            var thisItem = db.Items.FirstOrDefault(item => item.id == id);
+            db.Items.Remove(thisItem);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult Edit(int id)
         {
-            var thisCha = db.Characters.FirstOrDefault(cha => cha.id == id);
-            return View(thisCha);
+            var thisItem = db.Items.FirstOrDefault(item => item.id == id);
+            return View(thisItem);
         }
         [HttpPost]
-        public IActionResult Edit(Character character)
+        public IActionResult Edit(Item item)
         {
-            db.Entry(character).State = EntityState.Modified;
+            db.Entry(item).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

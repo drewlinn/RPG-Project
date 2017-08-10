@@ -1,0 +1,27 @@
+﻿@model RPG.Models.Inventory
+
+@{
+    ViewData["Title"] = "Inventory - Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Are you sure you want to Delete this inventory?</h2>
+
+
+@Html.DisplayNameFor(model => model.helmetId) : @Html.DisplayFor(model => model.helmetId)
+@Html.DisplayNameFor(model => model.armorId) : @Html.DisplayFor(model => model.armorId)
+@Html.DisplayNameFor(model => model.gloveId) : @Html.DisplayFor(model => model.gloveId)
+@Html.DisplayNameFor(model => model.bootId) : @Html.DisplayFor(model => model.bootId)
+@Html.DisplayNameFor(model => model.accessoryId) : @Html.DisplayFor(model => model.accessoryId)
+@Html.DisplayNameFor(model => model.rEquipId) : @Html.DisplayFor(model => model.rEquipId)
+@Html.DisplayNameFor(model => model.lEquipId) : @Html.DisplayFor(model => model.rEquipId)
+
+
+
+
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}
+
+<p>@Html.ActionLink("Back to home", "Index")</p>

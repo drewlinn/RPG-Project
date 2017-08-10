@@ -8,53 +8,53 @@ using System;
 
 namespace RPG.Controllers
 {
-    public class CharacterController : Controller
+    public class NPCController : Controller
     {
         private RPGContext db = new RPGContext();
         public IActionResult Index()
         {
-            return View(db.Characters.ToList());
+            return View(db.NPCs.ToList());
         }
 
         public IActionResult Details(int id)
         {
-            var thisCharacter = db.Characters.FirstOrDefault(cha => cha.id == id);
+            var thisNPC = db.NPCs.FirstOrDefault(npc => npc.id == id);
 
-            return View(thisCharacter);
+            return View(thisNPC);
         }
         public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Character character)
+        public IActionResult Create(NPC npc)
         {
-            db.Characters.Add(character);
+            db.NPCs.Add(npc);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult Delete(int id)
         {
-            var thisCha = db.Characters.FirstOrDefault(cha => cha.id == id);
-            return View(thisCha);
+            var thisNPC = db.NPCs.FirstOrDefault(npc => npc.id == id);
+            return View(thisNPC);
         }
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
-            var thisCha = db.Characters.FirstOrDefault(cha => cha.id == id);
-            db.Characters.Remove(thisCha);
+            var thisNPC = db.NPCs.FirstOrDefault(npc => npc.id == id);
+            db.NPCs.Remove(thisNPC);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult Edit(int id)
         {
-            var thisCha = db.Characters.FirstOrDefault(cha => cha.id == id);
-            return View(thisCha);
+            var thisNPC = db.NPCs.FirstOrDefault(npc => npc.id == id);
+            return View(thisNPC);
         }
         [HttpPost]
-        public IActionResult Edit(Character character)
+        public IActionResult Edit(NPC npc)
         {
-            db.Entry(character).State = EntityState.Modified;
+            db.Entry(npc).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

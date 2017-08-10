@@ -1,0 +1,30 @@
+﻿@model RPG.Models.Item
+@{
+    ViewData["Title"] = "Item - Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit @Html.DisplayFor(model => model.name)?</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.id)
+
+    @Html.LabelFor(model => model.name)
+    @Html.EditorFor(model => model.name)
+
+    @Html.LabelFor(model => model.sizeId)
+    @Html.EditorFor(model => model.sizeId)
+
+    @Html.LabelFor(model => model.weight)
+    @Html.EditorFor(model => model.weight)
+
+    @Html.LabelFor(model => model.categoryId)
+    @Html.EditorFor(model => model.categoryId)
+
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+}
+
+@Html.ActionLink("Back to List", "Index")

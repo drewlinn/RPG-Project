@@ -1,0 +1,25 @@
+﻿@model RPG.Models.Item
+@{
+    ViewData["Title"] = "Item - Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add a new Item</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.name)
+    @Html.EditorFor(model => model.name)
+
+    @Html.LabelFor(model => model.sizeId)
+    @Html.EditorFor(model => model.sizeId)
+
+    @Html.LabelFor(model => model.weight)
+    @Html.EditorFor(model => model.weight)
+
+    @Html.LabelFor(model => model.categoryId)
+    @Html.EditorFor(model => model.categoryId)
+
+    <input type="submit" value="Create" class="btn btn-default" />
+}
+@Html.ActionLink("Back to List", "Index")

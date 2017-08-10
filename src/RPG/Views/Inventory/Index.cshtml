@@ -1,0 +1,75 @@
+﻿@model IEnumerable<RPG.Models.Inventory>
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>RPG</h2>
+<hr />
+<p>
+    @Html.ActionLink("Add New Inventory", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.helmetId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.armorId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gloveId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bootId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.accessoryId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rEquipId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lEquipId)
+        </th>
+
+
+        <th></th>
+    </tr>
+
+    @foreach (var inv in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => inv.helmetId) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => inv.armorId) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => inv.gloveId) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => inv.bootId) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => inv.accessoryId) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => inv.rEquipId) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => inv.lEquipId) --
+            </td>
+
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = inv.id })
+                @Html.ActionLink("Details", "Details", new { id = inv.id })
+                @Html.ActionLink("Delete", "Delete", new { id = inv.id })
+            </td>
+        </tr>
+
+    }
+</table>

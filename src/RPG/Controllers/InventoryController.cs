@@ -8,53 +8,53 @@ using System;
 
 namespace RPG.Controllers
 {
-    public class CharacterController : Controller
+    public class InventoryController : Controller
     {
         private RPGContext db = new RPGContext();
         public IActionResult Index()
         {
-            return View(db.Characters.ToList());
+            return View(db.Inventories.ToList());
         }
 
         public IActionResult Details(int id)
         {
-            var thisCharacter = db.Characters.FirstOrDefault(cha => cha.id == id);
+            var thisInventory = db.Inventories.FirstOrDefault(inv => inv.id == id);
 
-            return View(thisCharacter);
+            return View(thisInventory);
         }
         public IActionResult Create()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult Create(Character character)
+        public IActionResult Create(Inventory inventory)
         {
-            db.Characters.Add(character);
+            db.Inventories.Add(inventory);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult Delete(int id)
         {
-            var thisCha = db.Characters.FirstOrDefault(cha => cha.id == id);
-            return View(thisCha);
+            var thisInv = db.Inventories.FirstOrDefault(inv => inv.id == id);
+            return View(thisInv);
         }
         [HttpPost, ActionName("Delete")]
         public IActionResult DeleteConfirmed(int id)
         {
-            var thisCha = db.Characters.FirstOrDefault(cha => cha.id == id);
-            db.Characters.Remove(thisCha);
+            var thisInv = db.Inventories.FirstOrDefault(inv => inv.id == id);
+            db.Inventories.Remove(thisInv);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
         public IActionResult Edit(int id)
         {
-            var thisCha = db.Characters.FirstOrDefault(cha => cha.id == id);
-            return View(thisCha);
+            var thisInv = db.Inventories.FirstOrDefault(inv => inv.id == id);
+            return View(thisInv);
         }
         [HttpPost]
-        public IActionResult Edit(Character character)
+        public IActionResult Edit(Inventory inventory)
         {
-            db.Entry(character).State = EntityState.Modified;
+            db.Entry(inventory).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

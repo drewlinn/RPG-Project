@@ -1,0 +1,26 @@
+﻿@model RPG.Models.NPC
+@{
+    ViewData["Title"] = "NPC - Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit @Html.DisplayFor(model => model.name)?</h2>
+<hr />
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.id)
+
+    @Html.LabelFor(model => model.name)
+    @Html.EditorFor(model => model.name)
+
+    @Html.LabelFor(model => model.image)
+    @Html.EditorFor(model => model.image)
+
+    @Html.LabelFor(model => model.inventoryId)
+    @Html.EditorFor(model => model.inventoryId)
+
+    <input type="submit" value="Save" class="btn btn-primary" />
+}
+
+@Html.ActionLink("Back to List", "Index")

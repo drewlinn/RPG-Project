@@ -1,0 +1,47 @@
+﻿@model IEnumerable<RPG.Models.NPC>
+
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>RPG</h2>
+<hr />
+<p>
+    @Html.ActionLink("Add New NPC", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.inventoryId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var npc in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(model => npc.name) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => npc.image) --
+            </td>
+            <td>
+                @Html.DisplayFor(model => npc.inventoryId) --
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = npc.id })
+                @Html.ActionLink("Details", "Details", new { id = npc.id })
+                @Html.ActionLink("Delete", "Delete", new { id = npc.id })
+            </td>
+        </tr>
+
+    }
+</table>

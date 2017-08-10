@@ -8,9 +8,10 @@ using RPG.Models;
 namespace RPG.Migrations
 {
     [DbContext(typeof(RPGContext))]
-    partial class RPGContextModelSnapshot : ModelSnapshot
+    [Migration("20170810165218_ItemTable")]
+    partial class ItemTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -139,30 +140,6 @@ namespace RPG.Migrations
                     b.ToTable("Characters");
                 });
 
-            modelBuilder.Entity("RPG.Models.Inventory", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("accessoryId");
-
-                    b.Property<int>("armorId");
-
-                    b.Property<int>("bootId");
-
-                    b.Property<int>("gloveId");
-
-                    b.Property<int>("helmetId");
-
-                    b.Property<int>("lEquipId");
-
-                    b.Property<int>("rEquipId");
-
-                    b.HasKey("id");
-
-                    b.ToTable("Inventories");
-                });
-
             modelBuilder.Entity("RPG.Models.Item", b =>
                 {
                     b.Property<int>("id")
@@ -193,22 +170,6 @@ namespace RPG.Migrations
                     b.HasKey("id");
 
                     b.ToTable("Locations");
-                });
-
-            modelBuilder.Entity("RPG.Models.NPC", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("image");
-
-                    b.Property<int>("inventoryId");
-
-                    b.Property<string>("name");
-
-                    b.HasKey("id");
-
-                    b.ToTable("NPCs");
                 });
 
             modelBuilder.Entity("RPG.Models.User", b =>
